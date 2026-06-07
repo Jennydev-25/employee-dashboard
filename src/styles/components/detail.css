@@ -1,4 +1,7 @@
 /* Componente detail */
+.detail[hidden] {
+    display: none;
+}
 
 .detail {
     min-height: 100vh;
