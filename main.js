@@ -2,7 +2,8 @@
 
 import { validateEmail, validatePassword, loadCredentials, saveSession, getSession, clearSession } from './src/scripts/auth.js';
 import { getEmployees } from './src/scripts/api.js';
-import { renderEmployees, showLoading, hideLoading, showError, showDetail, hideDetail } from './src/scripts/ui.js';
+import { renderEmployees, showLoading, hideLoading, showError, showDetail, hideDetail, renderFilterButtons } from './src/scripts/ui.js';
+import { filterByLetter } from './src/scripts/filter.js';
 
 // Detectar pagina activa
 const loginForm = document.getElementById('login-form');
@@ -92,6 +93,24 @@ async function initDashboard() {
         counter.textContent = `${employees.length} empleados`;
         renderEmployees(employees, container);
 
+        // Filtro
+        const filterContainer = document.getElementById('filter-buttons');
+        renderFilterButtons(filterContainer);
+
+        filterContainer.addEventListener('click', (e) => {
+            const btn = e.target.closest('.filter__btn');
+            if (!btn) return;
+
+            const letter = btn.dataset.letter;
+
+            document.querySelectorAll('.filter__btn').forEach(b => b.classList.remove('filter__btn--active'));
+            btn.classList.add('filter__btn--active');
+
+            const filtered = filterByLetter(employees, letter);
+            renderEmployees(filtered, container);
+        });
+
+        // Event delegation tarjetas
         container.addEventListener('click', (e) => {
             const card = e.target.closest('.card');
             if (!card) return;
