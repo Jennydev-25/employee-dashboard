@@ -46,6 +46,15 @@ export function showDetail(employee, avatarUrl) {
     detail.hidden = false;
 }
 
+// Oculta el detalle y vuelve al listado
+export function hideDetail() {
+    const detail = document.getElementById('employee-detail');
+    const main = document.querySelector('.dashboard-main');
+
+    detail.hidden = true;
+    main.hidden = false;
+}
+
 // Muestra el indicador de carga
 export function showLoading(container) {
     container.innerHTML = `
