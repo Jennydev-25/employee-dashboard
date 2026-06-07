@@ -2,7 +2,7 @@
 
 import { validateEmail, validatePassword, loadCredentials, saveSession, getSession, clearSession } from './src/scripts/auth.js';
 import { getEmployees } from './src/scripts/api.js';
-import { renderEmployees, showLoading, hideLoading, showError, showDetail, hideDetail, renderFilterButtons } from './src/scripts/ui.js';
+import { renderEmployees, showLoading, hideLoading, showError, showDetail, hideDetail, renderFilterButtons, showEmptyState } from './src/scripts/ui.js';
 import { filterByLetter } from './src/scripts/filter.js';
 
 // Detectar pagina activa
@@ -102,12 +102,24 @@ async function initDashboard() {
             if (!btn) return;
 
             const letter = btn.dataset.letter;
+            const isActive = btn.classList.contains('filter__btn--active');
 
             document.querySelectorAll('.filter__btn').forEach(b => b.classList.remove('filter__btn--active'));
-            btn.classList.add('filter__btn--active');
 
+            if (isActive && letter !== 'Todos') {
+                document.querySelector('[data-letter="Todos"]').classList.add('filter__btn--active');
+                renderEmployees(employees, container);
+                return;
+            }
+
+            btn.classList.add('filter__btn--active');
             const filtered = filterByLetter(employees, letter);
-            renderEmployees(filtered, container);
+
+            if (filtered.length === 0) {
+                showEmptyState(container, letter);
+            } else {
+                renderEmployees(filtered, container);
+            }
         });
 
         // Event delegation tarjetas
