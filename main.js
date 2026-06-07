@@ -14,6 +14,11 @@ if (loginForm) {
 
 // Login
 function initLogin() {
+    if (getSession()) {
+        window.location.replace('./src/pages/dashboard.html');
+        return;
+    }
+
     const emailInput = document.getElementById('email');
     const passwordInput = document.getElementById('password');
 
@@ -51,6 +56,7 @@ function initLogin() {
         try {
             const credentials = await loadCredentials();
             if (email === credentials.email && password === credentials.password) {
+                saveSession({ email });
                 window.location.replace('./src/pages/dashboard.html');
             } else {
                 showFieldError(emailInput, 'email-error', 'Credenciales incorrectas');
