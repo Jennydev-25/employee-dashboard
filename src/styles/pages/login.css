@@ -75,6 +75,18 @@ body.page-login {
     }
 }
 
+/* Footer */
+.footer {
+    text-align: center;
+    padding: var(--sp-lg);
+    margin-top: var(--sp-md);
+
+    & .footer__text {
+        font-size: var(--fs-xs);
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+
 /* Animacion */
 @keyframes fadeInUp {
     from {
