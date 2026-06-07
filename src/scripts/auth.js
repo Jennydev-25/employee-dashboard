@@ -28,3 +28,8 @@ export function getSession() {
     const session = localStorage.getItem('crewly_session');
     return session ? JSON.parse(session) : null;
 }
+
+// Elimina la sesion de localStorage
+export function clearSession() {
+    localStorage.removeItem('crewly_session');
+}
