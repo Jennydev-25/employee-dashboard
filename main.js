@@ -60,3 +60,16 @@ function initLogin() {
         }
     });
 }
+
+// Helpers
+function showFieldError(input, errorId, message) {
+    const errorEl = document.getElementById(errorId);
+    input.classList.add('form__input--error');
+    errorEl.textContent = message;
+}
+
+function clearFieldError(input, errorId) {
+    const errorEl = document.getElementById(errorId);
+    input.classList.remove('form__input--error');
+    errorEl.textContent = '';
+}
