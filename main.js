@@ -2,7 +2,7 @@
 
 import { validateEmail, validatePassword, loadCredentials, saveSession, getSession, clearSession } from './src/scripts/auth.js';
 import { getEmployees } from './src/scripts/api.js';
-import { renderEmployees, showLoading, hideLoading, showError } from './src/scripts/ui.js';
+import { renderEmployees, showLoading, hideLoading, showError, showDetail, hideDetail } from './src/scripts/ui.js';
 
 // Detectar pagina activa
 const loginForm = document.getElementById('login-form');
@@ -91,20 +91,38 @@ async function initDashboard() {
         hideLoading(container);
         counter.textContent = `${employees.length} empleados`;
         renderEmployees(employees, container);
+
+        // Event delegation para las tarjetas
+        container.addEventListener('click', (e) => {
+            const card = e.target.closest('.card');
+            if (!card) return;
+
+            const id = parseInt(card.dataset.id);
+            const employee = employees.find(emp => emp.id === id);
+            const maleIds = [2, 7, 8];
+            const gender = maleIds.includes(employee.id) ? 'men' : 'women';
+            const avatarUrl = `https://randomuser.me/api/portraits/${gender}/${employee.id}.jpg`;
+
+            showDetail(employee, avatarUrl);
+
+            document.getElementById('detail-back').addEventListener('click', () => {
+                hideDetail();
+            });
+        });
     } catch {
         showError(container, initDashboard);
     }
-}
 
-// Helpers
-function showFieldError(input, errorId, message) {
-    const errorEl = document.getElementById(errorId);
-    input.classList.add('form__input--error');
-    errorEl.textContent = message;
-}
+    // Helpers
+    function showFieldError(input, errorId, message) {
+        const errorEl = document.getElementById(errorId);
+        input.classList.add('form__input--error');
+        errorEl.textContent = message;
+    }
 
-function clearFieldError(input, errorId) {
-    const errorEl = document.getElementById(errorId);
-    input.classList.remove('form__input--error');
-    errorEl.textContent = '';
+    function clearFieldError(input, errorId) {
+        const errorEl = document.getElementById(errorId);
+        input.classList.remove('form__input--error');
+        errorEl.textContent = '';
+    }
 }
