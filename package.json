@@ -17,9 +17,11 @@
   "scripts": {
     "test": "vitest run --config config/vitest.config.js",
     "test-w": "vitest --config config/vitest.config.js",
-    "test-cover": "vitest run --coverage --config config/vitest.config.js"
+    "test-cover": "vitest run --coverage --config config/vitest.config.js",
+    "test:e2e": "playwright test --config config/playwright.config.js"
   },
   "devDependencies": {
+    "@playwright/test": "^1.60.0",
     "vitest": "^4.1.7"
   }
 }
