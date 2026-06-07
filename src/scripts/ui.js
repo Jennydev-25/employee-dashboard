@@ -27,6 +27,31 @@ export function renderEmployees(employees, container) {
     });
 }
 
+// Renderiza los botones del filtro A-Z
+export function renderFilterButtons(container) {
+    const letters = ['Todos', ...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')];
+
+    container.innerHTML = '';
+
+    letters.forEach(letter => {
+        const btn = document.createElement('button');
+        btn.className = 'filter__btn';
+        btn.textContent = letter;
+        btn.dataset.letter = letter;
+        if (letter === 'Todos') btn.classList.add('filter__btn--active');
+        container.appendChild(btn);
+    });
+}
+
+// Muestra mensaje de estado vacio
+export function showEmptyState(container, letter) {
+    container.innerHTML = `
+        <div class="empty-state">
+            <p class="empty-state__message">No hay empleados con la letra ${letter}</p>
+        </div>
+    `;
+}
+
 // Muestra el detalle de un empleado
 export function showDetail(employee, avatarUrl) {
     const detail = document.getElementById('employee-detail');

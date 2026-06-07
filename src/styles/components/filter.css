@@ -1,0 +1,49 @@
+/* Componente filter */
+
+.filter {
+    margin-bottom: var(--sp-lg);
+    overflow-x: auto;
+
+    /* Ocultar scrollbar - navegadores modernos */
+    scrollbar-width: none;
+
+    /* Ocultar scrollbar - webkit fallback */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    & .filter__buttons {
+        display: flex;
+        gap: var(--sp-xs);
+        padding-bottom: var(--sp-xs);
+        min-width: max-content;
+
+        @media (min-width: 768px) {
+            flex-wrap: wrap;
+            min-width: unset;
+        }
+    }
+
+    & .filter__btn {
+        padding: var(--sp-xs) var(--sp-md);
+        border-radius: var(--radius-full);
+        font-size: var(--fs-sm);
+        font-weight: var(--fw-semibold);
+        color: var(--color-text);
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        transition: background-color var(--transition), color var(--transition);
+        white-space: nowrap;
+
+        &:hover {
+            background: var(--color-primary-light);
+            color: var(--color-primary);
+        }
+
+        &.filter__btn--active {
+            background: var(--color-primary);
+            color: var(--color-text-on-primary);
+        }
+    }
+}
