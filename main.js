@@ -14,5 +14,6 @@ if (loginForm) {
 
 // Login
 function initLogin() {
-
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
 }
