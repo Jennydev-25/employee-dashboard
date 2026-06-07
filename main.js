@@ -92,7 +92,6 @@ async function initDashboard() {
         counter.textContent = `${employees.length} empleados`;
         renderEmployees(employees, container);
 
-        // Event delegation para las tarjetas
         container.addEventListener('click', (e) => {
             const card = e.target.closest('.card');
             if (!card) return;
@@ -105,24 +104,27 @@ async function initDashboard() {
 
             showDetail(employee, avatarUrl);
 
-            document.getElementById('detail-back').addEventListener('click', () => {
+            const backBtn = document.getElementById('detail-back');
+            const newBackBtn = backBtn.cloneNode(true);
+            backBtn.parentNode.replaceChild(newBackBtn, backBtn);
+            newBackBtn.addEventListener('click', () => {
                 hideDetail();
             });
         });
     } catch {
         showError(container, initDashboard);
     }
+}
 
-    // Helpers
-    function showFieldError(input, errorId, message) {
-        const errorEl = document.getElementById(errorId);
-        input.classList.add('form__input--error');
-        errorEl.textContent = message;
-    }
+// Helpers
+function showFieldError(input, errorId, message) {
+    const errorEl = document.getElementById(errorId);
+    input.classList.add('form__input--error');
+    errorEl.textContent = message;
+}
 
-    function clearFieldError(input, errorId) {
-        const errorEl = document.getElementById(errorId);
-        input.classList.remove('form__input--error');
-        errorEl.textContent = '';
-    }
+function clearFieldError(input, errorId) {
+    const errorEl = document.getElementById(errorId);
+    input.classList.remove('form__input--error');
+    errorEl.textContent = '';
 }
