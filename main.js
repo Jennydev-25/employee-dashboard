@@ -73,6 +73,11 @@ function initDashboard() {
         window.location.replace('../../index.html');
         return;
     }
+
+    document.getElementById('logout-btn').addEventListener('click', () => {
+        clearSession();
+        window.location.replace('../../index.html');
+    });
 }
 
 // Helpers
