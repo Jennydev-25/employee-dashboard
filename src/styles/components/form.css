@@ -1,0 +1,43 @@
+/* Formulario */
+
+.form__field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-xs);
+
+    & .form__label {
+        font-size: var(--fs-sm);
+        font-weight: var(--fw-semibold);
+        color: var(--color-text);
+    }
+
+    & .form__input {
+        padding: var(--sp-sm) var(--sp-md);
+        border: 1.5px solid var(--color-border);
+        border-radius: var(--radius-md);
+        color: var(--color-text);
+        background: #f0f5f2;
+        transition: border-color var(--transition), box-shadow var(--transition);
+
+        &:focus {
+            outline: none;
+            border-color: var(--color-border-focus);
+            box-shadow: 0 0 0 3px rgb(13 148 136 / 0.15);
+        }
+
+        &.form__input--error {
+            border-color: var(--color-error);
+            background-color: var(--color-error-bg);
+
+            &:focus {
+                box-shadow: 0 0 0 3px rgb(220 38 38 / 0.15);
+            }
+        }
+    }
+
+    & .form__error-msg {
+        font-size: var(--fs-xs);
+        color: var(--color-error);
+        min-height: 1rem;
+    }
+}
