@@ -24,9 +24,17 @@ function initLogin() {
 
     const emailInput = document.getElementById('email');
     const passwordInput = document.getElementById('password');
+    const togglePassword = document.getElementById('toggle-password');
 
     emailInput.addEventListener('input', () => clearFieldError(emailInput, 'email-error'));
     passwordInput.addEventListener('input', () => clearFieldError(passwordInput, 'password-error'));
+
+    togglePassword.addEventListener('click', () => {
+        const isPassword = passwordInput.type === 'password';
+        passwordInput.type = isPassword ? 'text' : 'password';
+        togglePassword.querySelector('.material-symbols-outlined').textContent = isPassword ? 'visibility_off' : 'visibility';
+        togglePassword.setAttribute('aria-label', isPassword ? 'Ocultar contraseña' : 'Mostrar contraseña');
+    });
 
     loginForm.addEventListener('submit', async (e) => {
         e.preventDefault();
