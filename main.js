@@ -1,6 +1,6 @@
 // Logica principal de la aplicacion
 
-import { validateEmail, validatePassword, loadCredentials, saveSession, getSession } from './src/scripts/auth.js';
+import { validateEmail, validatePassword, loadCredentials, saveSession, getSession, clearSession } from './src/scripts/auth.js';
 
 // Detectar pagina activa
 const loginForm = document.getElementById('login-form');
@@ -64,6 +64,19 @@ function initLogin() {
         } catch {
             showFieldError(emailInput, 'email-error', 'Error al verificar credenciales');
         }
+    });
+}
+
+// Dashboard
+function initDashboard() {
+    if (!getSession()) {
+        window.location.replace('../../index.html');
+        return;
+    }
+
+    document.getElementById('logout-btn').addEventListener('click', () => {
+        clearSession();
+        window.location.replace('../../index.html');
     });
 }
 
