@@ -67,6 +67,14 @@ function initLogin() {
     });
 }
 
+// Dashboard
+function initDashboard() {
+    if (!getSession()) {
+        window.location.replace('../../index.html');
+        return;
+    }
+}
+
 // Helpers
 function showFieldError(input, errorId, message) {
     const errorEl = document.getElementById(errorId);
