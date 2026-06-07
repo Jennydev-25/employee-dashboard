@@ -5,7 +5,8 @@ export function renderEmployees(employees, container) {
     container.innerHTML = '';
 
     employees.forEach(employee => {
-        const gender = employee.id % 2 === 0 ? 'women' : 'men';
+        const maleIds = [2, 7, 8];
+        const gender = maleIds.includes(employee.id) ? 'men' : 'women';
         const avatarUrl = `https://randomuser.me/api/portraits/${gender}/${employee.id}.jpg`;
 
         const card = document.createElement('article');
