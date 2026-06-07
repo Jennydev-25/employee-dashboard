@@ -22,3 +22,9 @@ export async function loadCredentials() {
 export function saveSession(user) {
     localStorage.setItem('crewly_session', JSON.stringify(user));
 }
+
+// Recupera la sesion guardada
+export function getSession() {
+    const session = localStorage.getItem('crewly_session');
+    return session ? JSON.parse(session) : null;
+}
