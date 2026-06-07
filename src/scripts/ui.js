@@ -43,6 +43,15 @@ export function renderFilterButtons(container) {
     });
 }
 
+// Muestra mensaje de estado vacio
+export function showEmptyState(container, letter) {
+    container.innerHTML = `
+        <div class="empty-state">
+            <p class="empty-state__message">No hay empleados con la letra ${letter}</p>
+        </div>
+    `;
+}
+
 // Muestra el detalle de un empleado
 export function showDetail(employee, avatarUrl) {
     const detail = document.getElementById('employee-detail');
