@@ -7,6 +7,9 @@
     justify-content: center;
     padding: var(--sp-2xl);
     gap: var(--sp-md);
+    min-height: 50vh;
+    grid-column: 1 / -1;
+    width: 100%;
 
     & .loading__spinner {
         width: 48px;
