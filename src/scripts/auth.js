@@ -10,3 +10,10 @@ export function validateEmail(email) {
 export function validatePassword(password) {
     return password.length >= 8 && /\d/.test(password);
 }
+
+// Carga las credenciales del admin desde .env/admin.json
+export async function loadCredentials() {
+    const response = await fetch('.env/admin.json');
+    if (!response.ok) throw new Error('No se pudieron cargar las credenciales');
+    return response.json();
+}
