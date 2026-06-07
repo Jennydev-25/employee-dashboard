@@ -1,0 +1,89 @@
+/* Login - mobile first */
+
+body.page-login {
+    background: radial-gradient(ellipse at top left, #0d9488, #008378, #004d47);
+}
+
+.login {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--sp-md);
+
+    & .login__card {
+        background: var(--color-surface);
+        border-radius: var(--radius-xl);
+        padding: var(--sp-md);
+        padding-top: 72px;
+        width: 100%;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+        border: 1px solid #bcc9c6;
+        position: relative;
+        margin-top: 48px;
+        animation: fadeInUp 0.4s ease;
+
+        @media (min-width: 480px) {
+            max-width: 420px;
+            padding: var(--sp-xl);
+            padding-top: 72px;
+        }
+    }
+
+    & .login__logo-wrapper {
+        position: absolute;
+        top: -48px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 96px;
+        height: 96px;
+        background: var(--color-surface);
+        border-radius: var(--radius-full);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        border: 1px solid #bcc9c6;
+    }
+
+    & .login__logo {
+        width: 56px;
+        height: 56px;
+        object-fit: contain;
+    }
+
+    & .login__header {
+        text-align: center;
+        margin-bottom: var(--sp-lg);
+    }
+
+    & .login__title {
+        font-size: var(--fs-xl);
+        color: var(--color-primary);
+        letter-spacing: -0.02em;
+        margin-bottom: var(--sp-xs);
+
+        @media (min-width: 480px) {
+            font-size: var(--fs-2xl);
+        }
+    }
+
+    & .login__subtitle {
+        font-size: var(--fs-sm);
+        color: var(--color-text-muted);
+    }
+}
+
+/* Animacion */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
