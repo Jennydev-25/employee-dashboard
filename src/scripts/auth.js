@@ -17,3 +17,8 @@ export async function loadCredentials() {
     if (!response.ok) throw new Error('No se pudieron cargar las credenciales');
     return response.json();
 }
+
+// Guarda la sesion en localStorage
+export function saveSession(user) {
+    localStorage.setItem('crewly_session', JSON.stringify(user));
+}
