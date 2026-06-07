@@ -1,6 +1,8 @@
 // Logica principal de la aplicacion
 
 import { validateEmail, validatePassword, loadCredentials, saveSession, getSession, clearSession } from './src/scripts/auth.js';
+import { getEmployees } from './src/scripts/api.js';
+import { renderEmployees, showLoading, hideLoading, showError } from './src/scripts/ui.js';
 
 // Detectar pagina activa
 const loginForm = document.getElementById('login-form');
@@ -68,7 +70,7 @@ function initLogin() {
 }
 
 // Dashboard
-function initDashboard() {
+async function initDashboard() {
     if (!getSession()) {
         window.location.replace('../../index.html');
         return;
@@ -78,6 +80,20 @@ function initDashboard() {
         clearSession();
         window.location.replace('../../index.html');
     });
+
+    const container = document.getElementById('employees-container');
+    const counter = document.getElementById('employees-counter');
+
+    showLoading(container);
+
+    try {
+        const employees = await getEmployees();
+        hideLoading(container);
+        counter.textContent = `${employees.length} empleados`;
+        renderEmployees(employees, container);
+    } catch {
+        showError(container, initDashboard);
+    }
 }
 
 // Helpers
