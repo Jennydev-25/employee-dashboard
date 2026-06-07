@@ -16,4 +16,7 @@ if (loginForm) {
 function initLogin() {
     const emailInput = document.getElementById('email');
     const passwordInput = document.getElementById('password');
+
+    emailInput.addEventListener('input', () => clearFieldError(emailInput, 'email-error'));
+    passwordInput.addEventListener('input', () => clearFieldError(passwordInput, 'password-error'));
 }
