@@ -27,6 +27,34 @@ export function renderEmployees(employees, container) {
     });
 }
 
+// Muestra el detalle de un empleado
+export function showDetail(employee, avatarUrl) {
+    const detail = document.getElementById('employee-detail');
+    const main = document.querySelector('.dashboard-main');
+
+    document.getElementById('detail-avatar').src = avatarUrl;
+    document.getElementById('detail-avatar').alt = `Foto de ${employee.name}`;
+    document.getElementById('detail-id').textContent = `ID DE EMPLEADO: ${employee.id}`;
+    document.getElementById('detail-name').textContent = employee.name;
+    document.getElementById('detail-email').textContent = employee.email;
+    document.getElementById('detail-street').textContent = employee.address.street;
+    document.getElementById('detail-suite').textContent = employee.address.suite;
+    document.getElementById('detail-city').textContent = `${employee.address.city}, ${employee.address.zipcode}`;
+    document.getElementById('detail-phone').textContent = employee.phone;
+
+    main.hidden = true;
+    detail.hidden = false;
+}
+
+// Oculta el detalle y vuelve al listado
+export function hideDetail() {
+    const detail = document.getElementById('employee-detail');
+    const main = document.querySelector('.dashboard-main');
+
+    detail.hidden = true;
+    main.hidden = false;
+}
+
 // Muestra el indicador de carga
 export function showLoading(container) {
     container.innerHTML = `

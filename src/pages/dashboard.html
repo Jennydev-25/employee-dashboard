@@ -28,6 +28,7 @@
             </button>
         </div>
     </header>
+
     <main class="dashboard-main">
         <section class="employees">
             <div class="employees__header">
@@ -41,6 +42,53 @@
             </div>
         </section>
     </main>
+
+    <section class="detail" id="employee-detail" hidden>
+        <article class="detail__card">
+            <header class="detail__header">
+                <img src="" alt="" class="detail__avatar" id="detail-avatar">
+                <p class="detail__id" id="detail-id"></p>
+                <h2 class="detail__name" id="detail-name"></h2>
+                <p class="detail__email">
+                    <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+                    <span id="detail-email"></span>
+                </p>
+            </header>
+            <div class="detail__info-grid">
+                <section class="detail__info-card">
+                    <h3 class="detail__info-title">
+                        <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+                        Dirección
+                    </h3>
+                    <dl class="detail__info-list">
+                        <dt class="detail__info-label">CALLE</dt>
+                        <dd class="detail__info-value" id="detail-street"></dd>
+                        <dt class="detail__info-label">SUITE</dt>
+                        <dd class="detail__info-value" id="detail-suite"></dd>
+                        <dt class="detail__info-label">CIUDAD Y CP</dt>
+                        <dd class="detail__info-value" id="detail-city"></dd>
+                    </dl>
+                </section>
+                <section class="detail__info-card">
+                    <h3 class="detail__info-title">
+                        <span class="material-symbols-outlined" aria-hidden="true">call</span>
+                        Teléfono
+                    </h3>
+                    <dl class="detail__info-list">
+                        <dt class="detail__info-label">NÚMERO DIRECTO</dt>
+                        <dd class="detail__info-value" id="detail-phone"></dd>
+                    </dl>
+                </section>
+            </div>
+            <footer class="detail__footer">
+                <button class="btn btn--primary detail__back" id="detail-back">
+                    <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+                    Volver
+                </button>
+            </footer>
+        </article>
+    </section>
+
     <script type="module" src="../../main.js"></script>
 </body>
 
