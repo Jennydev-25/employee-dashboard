@@ -1,6 +1,6 @@
 // Logica principal de la aplicacion
 
-import { validateEmail, validatePassword, loadCredentials } from './src/scripts/auth.js';
+import { validateEmail, validatePassword, loadCredentials, saveSession, getSession } from './src/scripts/auth.js';
 
 // Detectar pagina activa
 const loginForm = document.getElementById('login-form');
