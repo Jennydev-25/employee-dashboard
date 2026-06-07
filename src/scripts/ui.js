@@ -9,3 +9,9 @@ export function showLoading(container) {
         </div>
     `;
 }
+
+// Oculta el indicador de carga
+export function hideLoading(container) {
+    const loading = container.querySelector('.loading');
+    if (loading) loading.remove();
+}
