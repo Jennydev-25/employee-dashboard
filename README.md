@@ -62,23 +62,22 @@ Proyecto gestionado con **Jira** bajo metodología **Scrum** — Sprint de 1 sem
 
 | 📋 Backlog  | 🗂️ Tablero  |
 | :---------: | :---------: |
-| _pendiente_ | _pendiente_ |
+| ![Backlog Jira](src/assets/imgs/jira-backlog.png) | ![Tablero Jira](src/assets/imgs/jira-tablero.png) |
 
 |                   📅 Cronograma                    |     |
 | :------------------------------------------------: | :-: |
-| ![Cronograma Jira](src/assets/imgs/cronograma.png) |     |
+| ![Cronograma Jira](src/assets/imgs/jira-cronograma.png) |     |
 
 Estructura de archivos del proyecto:
 
 - **`index.html`** — página de login, punto de entrada de la app
 - **`main.js`** — orquestador principal, detecta la página activa y lanza la lógica correspondiente
 - **`package.json`** — dependencias y scripts del proyecto
+- **`vitest.config.js`** → configuración de tests unitarios
+- **`playwright.config.js`** → configuración de tests E2E
 - **`.env/`** — archivos de entorno locales, no se suben a GitHub:
   - `admin.json` → credenciales del administrador
   - `users.json` → datos de empleados del bootcamp
-- **`config/`** — configuraciones de herramientas:
-  - `vitest.config.js` → configuración de tests unitarios
-  - `playwright.config.js` → configuración de tests E2E
 - **`src/pages/`** — páginas adicionales:
   - `dashboard.html` → panel principal de empleados
 - **`src/scripts/`** — lógica dividida por responsabilidad:
