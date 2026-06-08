@@ -60,12 +60,12 @@ Proyecto gestionado con **Jira** bajo metodología **Scrum** — Sprint de 1 sem
 
 📸 Capturas de Jira:
 
-| 📋 Backlog  | 🗂️ Tablero  |
-| :---------: | :---------: |
+|                    📋 Backlog                     |                    🗂️ Tablero                     |
+| :-----------------------------------------------: | :-----------------------------------------------: |
 | ![Backlog Jira](src/assets/imgs/jira-backlog.png) | ![Tablero Jira](src/assets/imgs/jira-tablero.png) |
 
-|                   📅 Cronograma                    |     |
-| :------------------------------------------------: | :-: |
+|                      📅 Cronograma                      |     |
+| :-----------------------------------------------------: | :-: |
 | ![Cronograma Jira](src/assets/imgs/jira-cronograma.png) |     |
 
 Estructura de archivos del proyecto:
@@ -734,20 +734,20 @@ npm run test:e2e
 ## 📸 Resultado final
 
 | 🔐 Login · Mobile | 🔐 Login · Desktop |
-| :---------------: | :----------------: |
-|    _pendiente_    |    _pendiente_     |
+|:---:|:---:|
+| ![Login Mobile](src/assets/imgs/login-screenshot-mobile.png) | ![Login Desktop](src/assets/imgs/login-screenshot-desktop.png) |
 
 | 📊 Dashboard · Mobile | 📊 Dashboard · Desktop |
-| :-------------------: | :--------------------: |
-|      _pendiente_      |      _pendiente_       |
+|:---:|:---:|
+| ![Dashboard Mobile](src/assets/imgs/dashboard-screenshot-mobile.png) | ![Dashboard Desktop](src/assets/imgs/dashboard-screenshot-desktop.png) |
 
 | 🃏 Detalle empleado · Mobile | 🃏 Detalle empleado · Desktop |
-| :--------------------------: | :---------------------------: |
-|         _pendiente_          |          _pendiente_          |
+|:---:|:---:|
+| ![Detalle Mobile](src/assets/imgs/detail-screenshot-mobile.png) | ![Detalle Desktop](src/assets/imgs/detail-screenshot-desktop.png) |
 
 | 🔤 Filtro por letra · Mobile | 🔤 Filtro por letra · Desktop |
-| :--------------------------: | :---------------------------: |
-|         _pendiente_          |          _pendiente_          |
+|:---:|:---:|
+| ![Filtro Mobile](src/assets/imgs/filter-screenshot-mobile.png) | ![Filtro Desktop](src/assets/imgs/filter-screenshot-desktop.png) |
 
 ---
 
