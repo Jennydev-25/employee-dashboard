@@ -13,7 +13,8 @@ export function validatePassword(password) {
 
 // Carga las credenciales del admin desde .env/admin.json
 export async function loadCredentials() {
-    const response = await fetch('.env/admin.json');
+    const base = window.location.pathname.replace(/\/$/, '');
+    const response = await fetch(`${base}/.env/admin.json`);
     if (!response.ok) throw new Error('No se pudieron cargar las credenciales');
     return response.json();
 }
