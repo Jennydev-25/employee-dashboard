@@ -1,0 +1,24 @@
+{
+    "name": "Crewly",
+    "short_name": "Crewly",
+    "icons": [
+        {
+            "src": "src/assets/favicons/favicon-16x16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        },
+        {
+            "src": "src/assets/favicons/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "src/assets/favicons/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#0d9488",
+    "background_color": "#f3f4f6",
+    "display": "standalone"
+}
