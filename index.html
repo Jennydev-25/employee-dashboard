@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crewly — Login</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="src/assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="src/styles/main.css">
+</head>
+
+<body class="page-login">
+    <main class="login">
+        <section class="login__card">
+            <header class="login__header">
+                <div class="login__logo-wrapper">
+                    <img src="src/assets/imgs/logo.png" alt="Logotipo Crewly — timón náutico" class="login__logo"
+                        width="48" height="48">
+                </div>
+                <h1 class="login__title">Crewly</h1>
+                <p class="login__subtitle">Inicia sesión para gestionar tus empleados</p>
+            </header>
+            <form class="login__form" id="login-form" novalidate>
+                <div class="form__field">
+                    <label class="form__label" for="email">Correo electrónico</label>
+                    <input class="form__input" type="email" id="email" name="email"
+                        placeholder="ejemplo@correo.com"
+                        aria-describedby="email-error"
+                        autocomplete="email">
+                    <span class="form__error-msg" id="email-error" aria-live="polite"></span>
+                </div>
+                <div class="form__field">
+                    <label class="form__label" for="password">Contraseña</label>
+                    <div class="form__input-wrapper">
+                        <input class="form__input" type="password" id="password" name="password"
+                            placeholder="••••••••"
+                            aria-describedby="password-error"
+                            autocomplete="current-password">
+                        <button type="button" class="form__toggle-password" id="toggle-password"
+                            aria-label="Mostrar contraseña">
+                            <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
+                        </button>
+                    </div>
+                    <span class="form__error-msg" id="password-error" aria-live="polite"></span>
+                </div>
+                <button class="btn btn--primary" type="submit">
+                    Iniciar sesión
+                    <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+                </button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="footer__text">© 2026 Crewly. Todos los derechos reservados.</p>
+        <p class="footer__text">Desarrollado por Jennydev-25</p>
+    </footer>
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>

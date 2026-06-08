@@ -1,0 +1,17 @@
+/* Componente empty-state */
+
+.empty-state {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--sp-2xl);
+    grid-column: 1 / -1;
+    width: 100%;
+    min-height: 50vh;
+
+    & .empty-state__message {
+        font-size: var(--fs-base);
+        color: var(--color-text-muted);
+        text-align: center;
+    }
+}

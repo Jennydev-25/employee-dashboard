@@ -1,0 +1,27 @@
+{
+  "name": "employee-dashboard",
+  "version": "1.0.0",
+  "description": "Admin dashboard for employee management built with HTML, CSS and vanilla JavaScript",
+  "homepage": "https://github.com/Jennydev-25/employee-dashboard#readme",
+  "bugs": {
+    "url": "https://github.com/Jennydev-25/employee-dashboard/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jennydev-25/employee-dashboard.git"
+  },
+  "license": "ISC",
+  "author": "Jennydev-25",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "test": "vitest run --config config/vitest.config.js",
+    "test-w": "vitest --config config/vitest.config.js",
+    "test-cover": "vitest run --coverage --config config/vitest.config.js",
+    "test:e2e": "npx playwright test --config config/playwright.config.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "vitest": "^4.1.7"
+  }
+}

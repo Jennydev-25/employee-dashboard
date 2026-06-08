@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crewly — Dashboard</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../../src/assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../src/assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../src/assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../../site.webmanifest">
+    <link rel="stylesheet" href="../../src/styles/main.css">
+</head>
+
+<body class="page-dashboard">
+    <header class="dashboard-header">
+        <div class="dashboard-header__brand">
+            <img src="../../src/assets/imgs/logo.png" alt="Logotipo Crewly — timon nautico"
+                class="dashboard-header__logo" width="28" height="28">
+            <span class="dashboard-header__name">Crewly</span>
+        </div>
+        <div class="dashboard-header__actions">
+            <span class="dashboard-header__greeting">Hola, Admin</span>
+            <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Avatar del administrador"
+                class="dashboard-header__avatar" width="36" height="36">
+            <button class="btn btn--ghost" id="logout-btn">
+                Cerrar sesión
+            </button>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <section class="employees">
+            <nav class="filter" aria-label="Filtrar empleados por letra" id="filter-buttons">
+            </nav>
+            <div class="employees__header">
+                <div class="employees__title-group">
+                    <h1 class="employees__title">Empleados</h1>
+                    <span class="employees__counter" id="employees-counter">0 empleados</span>
+                </div>
+                <p class="employees__subtitle">Directorio de contacto del equipo de trabajo.</p>
+            </div>
+            <div class="employees__grid" id="employees-container" aria-live="polite">
+            </div>
+        </section>
+    </main>
+
+    <section class="detail" id="employee-detail" hidden>
+        <article class="detail__card">
+            <header class="detail__header">
+                <img src="" alt="" class="detail__avatar" id="detail-avatar">
+                <p class="detail__id" id="detail-id"></p>
+                <h2 class="detail__name" id="detail-name"></h2>
+                <p class="detail__email">
+                    <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+                    <span id="detail-email"></span>
+                </p>
+            </header>
+            <div class="detail__info-grid">
+                <section class="detail__info-card">
+                    <h3 class="detail__info-title">
+                        <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+                        Dirección
+                    </h3>
+                    <dl class="detail__info-list">
+                        <dt class="detail__info-label">CALLE</dt>
+                        <dd class="detail__info-value" id="detail-street"></dd>
+                        <dt class="detail__info-label">SUITE</dt>
+                        <dd class="detail__info-value" id="detail-suite"></dd>
+                        <dt class="detail__info-label">CIUDAD Y CP</dt>
+                        <dd class="detail__info-value" id="detail-city"></dd>
+                    </dl>
+                </section>
+                <section class="detail__info-card">
+                    <h3 class="detail__info-title">
+                        <span class="material-symbols-outlined" aria-hidden="true">call</span>
+                        Teléfono
+                    </h3>
+                    <dl class="detail__info-list">
+                        <dt class="detail__info-label">NÚMERO DIRECTO</dt>
+                        <dd class="detail__info-value" id="detail-phone"></dd>
+                    </dl>
+                </section>
+            </div>
+            <footer class="detail__footer">
+                <button class="btn btn--primary detail__back" id="detail-back">
+                    <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+                    Volver
+                </button>
+            </footer>
+        </article>
+    </section>
+
+    <script type="module" src="../../main.js"></script>
+</body>
+
+</html>
