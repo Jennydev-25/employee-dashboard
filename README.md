@@ -64,9 +64,9 @@ Proyecto gestionado con **Jira** bajo metodología **Scrum** — Sprint de 1 sem
 | :---------: | :---------: |
 | _pendiente_ | _pendiente_ |
 
-| 📅 Cronograma |     |
-| :-----------: | :-: |
-|  ![Cronograma Jira](src/assets/imgs/cronograma.png)  |     |
+|                   📅 Cronograma                    |     |
+| :------------------------------------------------: | :-: |
+| ![Cronograma Jira](src/assets/imgs/cronograma.png) |     |
 
 Estructura de archivos del proyecto:
 
@@ -143,16 +143,16 @@ Diseñado en FigJam antes del desarrollo para mapear las tres rutas posibles del
 
 🔗 Ver prototipo en Stitch → [Crewly Prototype](https://stitch.withgoogle.com/projects/4324233133906520306)
 
-| 🔐 Login · Mobile | 🔐 Login · Desktop |
-|:---:|:---:|
+|                      🔐 Login · Mobile                      |                      🔐 Login · Desktop                       |
+| :---------------------------------------------------------: | :-----------------------------------------------------------: |
 | ![Login Mobile](src/assets/imgs/prototype-login-mobile.png) | ![Login Desktop](src/assets/imgs/prototype-login-desktop.jpg) |
 
-| 📊 Dashboard · Mobile | 📊 Dashboard · Desktop |
-|:---:|:---:|
+|                        📊 Dashboard · Mobile                        |                        📊 Dashboard · Desktop                         |
+| :-----------------------------------------------------------------: | :-------------------------------------------------------------------: |
 | ![Dashboard Mobile](src/assets/imgs/prototype-dashboard-mobile.png) | ![Dashboard Desktop](src/assets/imgs/prototype-dashboard-desktop.jpg) |
 
-| 🃏 Detalle · Mobile | 🃏 Detalle · Desktop |
-|:---:|:---:|
+|                      🃏 Detalle · Mobile                       |                       🃏 Detalle · Desktop                       |
+| :------------------------------------------------------------: | :--------------------------------------------------------------: |
 | ![Detalle Mobile](src/assets/imgs/prototype-detail-mobile.png) | ![Detalle Desktop](src/assets/imgs/prototype-detail-desktop.png) |
 
 ### Mockups · Alta fidelidad
@@ -471,7 +471,9 @@ Diseñado en FigJam antes del desarrollo para mapear las tres rutas posibles del
   <tbody>
     <tr>
       <td>validateEmail: email válido devuelve true</td>
-      <td rowspan="10" align="center"><em>pendiente</em></td>
+      <td rowspan="10" align="center">
+        <img src="./src/assets/imgs/vitest-screenshot.png" alt="Vitest Unit Tests Passed" width="450" />
+      </td>
     </tr>
     <tr><td>validateEmail: email sin arroba devuelve false</td></tr>
     <tr><td>validateEmail: email sin dominio devuelve false</td></tr>
@@ -497,7 +499,9 @@ Diseñado en FigJam antes del desarrollo para mapear las tres rutas posibles del
   <tbody>
     <tr>
       <td>Login con credenciales válidas redirige al dashboard</td>
-      <td rowspan="5" align="center"><em>pendiente</em></td>
+      <td rowspan="5" align="center">
+        <img src="./src/assets/imgs/playwright-screenshot.png" alt="Playwright E2E Tests Passed" width="450" />
+      </td>
     </tr>
     <tr><td>Login con credenciales incorrectas muestra error</td></tr>
     <tr><td>Campos vacíos muestran errores de validación</td></tr>
