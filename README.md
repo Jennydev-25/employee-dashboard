@@ -58,8 +58,6 @@ Antes de empezar a programar definí la identidad visual del proyecto.
 
 Proyecto gestionado con **Jira** bajo metodología **Scrum** — Sprint de 1 semana.
 
-🔗 Ver tablero en Jira → _pendiente_
-
 📸 Capturas de Jira:
 
 | 📋 Backlog  | 🗂️ Tablero  |
@@ -68,7 +66,7 @@ Proyecto gestionado con **Jira** bajo metodología **Scrum** — Sprint de 1 sem
 
 | 📅 Cronograma |     |
 | :-----------: | :-: |
-|  _pendiente_  |     |
+|  ![Cronograma Jira](src/assets/imgs/cronograma.png)  |     |
 
 Estructura de archivos del proyecto:
 
@@ -121,7 +119,11 @@ Estructura de archivos del proyecto:
 
 Diseñado en FigJam antes del desarrollo para mapear las tres rutas posibles del usuario.
 
-🔗 Ver userflow en FigJam → _pendiente_
+🔗 Ver userflow en FigJam → [User Flow Dashboard](https://www.figma.com/board/pbJBqJZ6DzGZBdL10FCyQY/User-Flow-Dashboard)
+
+📸 Captura:
+
+![Userflow Crewly](src/assets/imgs/userflow.png)
 
 **Ruta principal:** Inicio → Login → Validación → Dashboard → Detalle → Filtro → Logout
 
@@ -135,33 +137,27 @@ Diseñado en FigJam antes del desarrollo para mapear las tres rutas posibles del
 
 ### Prototipos · Stitch
 
-🔗 Ver prototipo login en Stitch → _pendiente_
+🔗 Ver prototipo en Stitch → [Crewly Prototype](https://stitch.withgoogle.com/projects/12203020217935768404)
 
-🔗 Ver prototipo dashboard en Stitch → _pendiente_
+### Prototipos · Stitch
+
+🔗 Ver prototipo en Stitch → [Crewly Prototype](https://stitch.withgoogle.com/projects/4324233133906520306)
 
 | 🔐 Login · Mobile | 🔐 Login · Desktop |
-| :---------------: | :----------------: |
-|    _pendiente_    |    _pendiente_     |
+|:---:|:---:|
+| ![Login Mobile](src/assets/imgs/prototype-login-mobile.png) | ![Login Desktop](src/assets/imgs/prototype-login-desktop.jpg) |
 
 | 📊 Dashboard · Mobile | 📊 Dashboard · Desktop |
-| :-------------------: | :--------------------: |
-|      _pendiente_      |      _pendiente_       |
+|:---:|:---:|
+| ![Dashboard Mobile](src/assets/imgs/prototype-dashboard-mobile.png) | ![Dashboard Desktop](src/assets/imgs/prototype-dashboard-desktop.jpg) |
+
+| 🃏 Detalle · Mobile | 🃏 Detalle · Desktop |
+|:---:|:---:|
+| ![Detalle Mobile](src/assets/imgs/prototype-detail-mobile.png) | ![Detalle Desktop](src/assets/imgs/prototype-detail-desktop.png) |
 
 ### Mockups · Alta fidelidad
 
-🔗 Ver mockups en Figma → _pendiente_
-
-| 🔐 Login · Mobile | 🔐 Login · Desktop |
-| :---------------: | :----------------: |
-|    _pendiente_    |    _pendiente_     |
-
-| 📊 Dashboard · Mobile | 📊 Dashboard · Desktop |
-| :-------------------: | :--------------------: |
-|      _pendiente_      |      _pendiente_       |
-
-| 🃏 Detalle empleado · Mobile | 🃏 Detalle empleado · Desktop |
-| :--------------------------: | :---------------------------: |
-|         _pendiente_          |          _pendiente_          |
+🔗 Ver mockups en Figma → [Crewly Dashboard](https://www.figma.com/design/BfH5GeXpUrf5nMf7UwrXeE/Employee-dashboard?node-id=0-1&t=PRXVc2G6m7SGJI6Z-1)
 
 ---
 
