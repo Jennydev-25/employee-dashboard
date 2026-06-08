@@ -657,14 +657,15 @@ Diseñado en FigJam antes del desarrollo para mapear las tres rutas posibles del
 <details>
 <summary><code>chore/deploy</code></summary>
 
-- `chore`: expose admin.json for GitHub Pages deployment
-- `docs`: update README with final links and results
-
-</details>
-
-<details>
-<summary><code>main</code></summary>
-
+- `docs`: update README with final commit history and project structure
+- `docs`: add screenshots to README
+- `chore`: relocate test configurations to root and update playwright paths
+- `docs`: add vitest and playwright test screenshots to README
+- `docs`: add Jira screenshots
+- `docs`: add final result screenshots to README
+- `chore`: add GitHub Actions workflow for GitHub Pages deployment
+- `fix`: use dynamic base path for admin.json fetch
+- `docs`: add GitHub Pages URL and final commits to README
 - `chore`: merge dev into main for deployment
 
 </details>
@@ -753,7 +754,7 @@ npm run test:e2e
 
 ## 🌐 Demo en producción
 
-👉 Ver Crewly en vivo → _pendiente_
+👉 [Ver Crewly en vivo](https://jennydev-25.github.io/employee-dashboard/)
 
 ---
 
