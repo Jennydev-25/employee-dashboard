@@ -18,9 +18,13 @@ jobs:
           mkdir -p .env
           echo '${{ secrets.ADMIN_JSON_CONTENT }}' > .env/admin.json
 
+      - name: Create .nojekyll
+        run: touch .nojekyll
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./
           exclude_assets: ""
+          dotfiles: true
