@@ -756,7 +756,14 @@ npm run test:e2e
 
 👉 [Ver Crewly en vivo](https://jennydev-25.github.io/employee-dashboard/)
 
----
+🔐 Credenciales de demo
+
+| Campo | Valor |
+|:---|:---|
+| Email | admin@crewly.com |
+| Contraseña | Admin1234 |
+
+---   
 
 ## 👩‍💻 Autora
 
