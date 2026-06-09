@@ -138,10 +138,6 @@ Diseñado en FigJam antes del desarrollo para mapear las tres rutas posibles del
 
 🔗 Ver prototipo en Stitch → [Crewly Prototype](https://stitch.withgoogle.com/projects/12203020217935768404)
 
-### Prototipos · Stitch
-
-🔗 Ver prototipo en Stitch → [Crewly Prototype](https://stitch.withgoogle.com/projects/4324233133906520306)
-
 |                      🔐 Login · Mobile                      |                      🔐 Login · Desktop                       |
 | :---------------------------------------------------------: | :-----------------------------------------------------------: |
 | ![Login Mobile](src/assets/imgs/prototype-login-mobile.png) | ![Login Desktop](src/assets/imgs/prototype-login-desktop.jpg) |
